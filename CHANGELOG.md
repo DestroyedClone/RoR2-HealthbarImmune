@@ -1,4 +1,4 @@
-﻿- `1.0.3` - SOTS update
+- `1.0.3` - SOTS update
 	- Fixed IMMUNE not showing in the healthbar
 - `1.0.2`
 	- Added a config blacklist for characters (Suggested by CatsArmy)
