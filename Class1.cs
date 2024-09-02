@@ -42,10 +42,10 @@ namespace HealthbarImmune
             On.RoR2.BodyCatalog.Init += BodyCatalog_Init;
         }
 
-        private void BodyCatalog_Init(On.RoR2.BodyCatalog.orig_Init orig)
+        private System.Collections.IEnumerator BodyCatalog_Init(On.RoR2.BodyCatalog.orig_Init orig)
         {
-            orig();
             SetupDictionary();
+            yield return orig;
         }
 
         public static void SetupDictionary()
