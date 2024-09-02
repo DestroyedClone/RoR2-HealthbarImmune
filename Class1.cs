@@ -112,6 +112,8 @@ namespace HealthbarImmune
                 {
                     if (self.currentHealthText) self.currentHealthText.text = "";
                     if (self.fullHealthText) self.fullHealthText.text = "";
+                    if (self.spriteAsNumberManager) self.spriteAsNumberManager.gameObject.SetActive(false);
+                    slash.gameObject.SetActive(true);
                     self.barInfoCollection.trailingOverHealthbarInfo.color = ImmuneColor;
                     return;
                 }
@@ -130,6 +132,8 @@ namespace HealthbarImmune
                         self.displayStringFullHealth = num3;
                         self.fullHealthText.text = num3.ToString();
                     }
+                    if (self.spriteAsNumberManager) self.spriteAsNumberManager.gameObject.SetActive(true);
+                    slash.gameObject.SetActive(false);
                     return;
                 }
             }
