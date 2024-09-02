@@ -1,0 +1,9 @@
+{
+    "name": "HealthbarImmune",
+    "version_number": "1.0.3",
+    "website_url": "https://github.com/DestroyedClone/RoR2-HealthbarImmune",
+    "description": "1.0.3 - Fixed for SOTS | Turns the healthbar yellow and text to IMMUNE when invincible.",
+  "dependencies": [
+    "bbepis-BepInExPack-5.4.2117"
+  ]
+}

@@ -1,0 +1,8 @@
+﻿- `1.0.3` - SOTS update
+	- Fixed IMMUNE not showing in the healthbar
+- `1.0.2`
+	- Added a config blacklist for characters (Suggested by CatsArmy)
+	- Risk of Options support
+ - `1.0.1` - SOTV update
+	- Removed R2API dependency + SOTV Patch
+ - `1.0.0` - Release
