@@ -13,7 +13,7 @@ using UnityEngine;
 
 namespace HealthbarImmune
 {
-    [BepInPlugin("com.DestroyedClone.HealthbarImmune", "Healthbar Immune", "1.0.2")]
+    [BepInPlugin("com.DestroyedClone.HealthbarImmune", "Healthbar Immune", "1.0.3")]
     [BepInDependency("com.rune580.riskofoptions", BepInDependency.DependencyFlags.SoftDependency)]
     public class HealthbarImmunePlugin : BaseUnityPlugin
     {
@@ -39,13 +39,7 @@ namespace HealthbarImmune
             if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.rune580.riskofoptions"))
                 ModSupport_RiskOfOptions.Initialize();
 
-            On.RoR2.BodyCatalog.Init += BodyCatalog_Init;
-        }
-
-        private System.Collections.IEnumerator BodyCatalog_Init(On.RoR2.BodyCatalog.orig_Init orig)
-        {
-            SetupDictionary();
-            yield return orig;
+            RoR2.BodyCatalog.availability.CallWhenAvailable(SetupDictionary);
         }
 
         public static void SetupDictionary()
