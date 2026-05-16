@@ -132,8 +132,15 @@ namespace HealthbarImmune
                         self.displayStringFullHealth = num3;
                         self.fullHealthText.text = num3.ToString();
                     }
-                    if (self.spriteAsNumberManager) self.spriteAsNumberManager.gameObject.SetActive(true);
-                    slash.gameObject.SetActive(false);
+                    if (self.spriteAsNumberManager)
+                    {
+                        self.spriteAsNumberManager.gameObject.SetActive(true);
+                        slash.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        slash.gameObject.SetActive(true);
+                    }
                     return;
                 }
             }
